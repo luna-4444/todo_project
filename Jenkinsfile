@@ -10,16 +10,14 @@ pipeline{
                 sh 'docker build -t todo_app_jenkins .'
             }
     }
-    stage("Start Pushing to Docker Hub"){
-            steps {
-            sh 'docker tag todo_app_jenkins $dockerhub_USR/sample_repo:todo_app_jenkins'
-            sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
+        stage("Start Pushing to Docker Hub"){
+                steps {
+                sh 'docker tag todo_app_jenkins $dockerhub_USR/sample_repo:todo_app_jenkins'
+                sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
 
-            sh 'docker push $dockerhub_USR/sample_repo:todo_app_jenkins'
-            }
-            }
+                sh 'docker push $dockerhub_USR/sample_repo:todo_app_jenkins'
+                }
+        }
     }
 
-    }
-    
 }
