@@ -12,10 +12,11 @@ pipeline{
     }
     stage("Start Pushing to Docker Hub"){
             steps {
-            sh 'docker push todo_app_jenkins'
+            sh 'docker tag todo_app_jenkins $dockerhub_USR/sample_repo:todo_app_jenkins'
             sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
 
-            sh 'docker push $dockerhub_USR/todo_app_jenkins'
+            sh 'docker push $dockerhub_USR/sample_repo:todo_app_jenkins'
+            }
             }
     }
 
