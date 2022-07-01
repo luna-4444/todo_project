@@ -10,6 +10,7 @@ pipeline{
                 sh 'pip install -r requirements.txt'
                 sh 'python manage.py test'
 
+
                 sh 'All tests passed successfully!'
             }
         }
