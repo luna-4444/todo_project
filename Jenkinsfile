@@ -9,6 +9,7 @@ pipeline{
     stages {
         stage('Installing Dependencies...') {
             steps {
+                sh 'Will start to fail...'
                 sh 'pip install -r requirements.txt'
                 sh 'python manage.py test'
 
