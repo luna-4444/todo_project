@@ -22,7 +22,7 @@ pipeline {
         {
             steps {
                 sh 'git checkout main'
-                sh 'git merge dev'
+                sh 'git merge origin/dev'
             }
         }
         stage('Done') {
