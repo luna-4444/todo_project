@@ -25,7 +25,7 @@ pipeline {
                 sh 'git config --global user.name "luna-4444"'
 
                 sh 'git checkout main'
-                sh 'git merge -X theirs origin/dev'
+                sh 'git merge origin/dev'
             }
         }
         stage('Done') {
