@@ -24,9 +24,9 @@ pipeline {
                 sh 'git config --global user.email "chandra.kiran@couture.ai"'
                 sh 'git config --global user.name "luna-4444"'
 
-                sh 'git checkout origin/main'
+                // sh 'git checkout origin/main'
 
-                sh 'git merge origin/dev'
+                // sh 'git merge origin/dev'
             }
         }
         stage('Done') {
