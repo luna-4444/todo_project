@@ -24,8 +24,9 @@ pipeline {
                 sh 'git config --global user.email "chandra.kiran@couture.ai"'
                 sh 'git config --global user.name "luna-4444"'
                 sh 'echo GitHub config successful!'
-                sh 'git merge --strategy-option ours'
+
                 sh 'git checkout main'
+                sh 'git merge --strategy-option ours'
                 sh 'git merge origin/dev'
             }
         }
