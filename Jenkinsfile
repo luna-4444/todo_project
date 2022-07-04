@@ -21,6 +21,9 @@ pipeline {
         stage('Merge into Main')
         {
             steps {
+                sh 'git config --global user.email "chandra.kiran@couture.ai"'
+                sh 'git config --global user.name "luna-4444"'
+                sh 'GitHub config successful!'
                 sh 'git checkout main'
                 sh 'git merge origin/dev'
             }
