@@ -33,7 +33,7 @@ pipeline {
             steps {
                 // sh 'git checkout dev'
                 // sh 'git branch -D dev'
-                sh 'Done mergning into main'
+                sh 'echo Done mergning into main'
             }
         }
         // stage('Build Image') {
