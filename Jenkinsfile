@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'python' }
+        docker { image 'python3.8' }
     }
     environment {
         dockerhub = credentials('dockerhub_luna4444')
