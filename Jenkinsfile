@@ -26,8 +26,7 @@ pipeline {
                 sh 'echo GitHub config successful!'
 
                 sh 'git checkout main'
-                sh 'git merge --strategy-option ours'
-                sh 'git merge origin/dev'
+                sh 'git merge -X theirs origin/dev'
             }
         }
         stage('Done') {
