@@ -9,12 +9,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt'
             }
         }
         stage('Test') {
             steps {
-                sh 'python manage.py test'
+                sh 'python3 manage.py test'
             }
         }
         stage('Merge into Main')
